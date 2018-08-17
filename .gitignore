@@ -1,0 +1,7 @@
+*.gz
+*.so
+*.o
+*.pyc
+build/*
+dist/*
+__pycache__

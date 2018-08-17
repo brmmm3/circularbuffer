@@ -1,0 +1,70 @@
+1.2.11:
+Fix shutdown method again and remove wait argument.
+Reduce PEP8 findings
+
+1.2.10:
+Fix join method. Call shutdown method with the correct parameters.
+In shutdown method send finish command to child threads if soon is True
+independent of the wait parameter.
+
+1.2.9:
+Add method join.
+Fix method shutdown_children to release job_cnt semaphore.
+
+1.2.8:
+Fix global Shutdown method and add option 'now'.
+
+1.2.7:
+Fix checking of type parameter wait in as_completed.
+
+1.2.6:
+Fix link to archive file.
+
+1.2.5:
+Add support for quashing results for all submit methods.
+Add init_callback parameter to Pool for custom initialization of new threads.
+Improve README.
+
+1.2.4:
+Just a version update because of file-name-reuse issue on github.
+
+1.2.3:
+Some more fixes in setup.py.
+
+1.2.2:
+Some fixes in setup.py.
+
+1.2.1:
+Added option 'soon' to shutdown.
+
+1.2.0:
+Added submit_at and submit_done_at to schedule jobs at a specific time with
+an optional interval.
+schedule now returns a TimerObj object which contains the current timer id.
+To cancel a job supply the TimerObj to the cancel function.
+
+1.1.0:
+Problem fixed when having more than one instance of the thread pool.
+Further optimization with Cython.
+Add submit_first, submit_later and schedule.
+Added some examples.
+Improved ReadMe.
+
+1.0.6:
+submit and submit_done return now the id of the job.
+cancel accepts a job id. This allows cancelling of single jobs.
+Fix a bug in shutdown.
+
+1.0.5:
+Add alive function which return the number of alive child threads.
+shutdown now return True if all child threads have died.
+If timeout value in shutdown <= 0 return immediately.
+
+1.0.4:
+Add support for generator functions when using submit.
+
+1.0.3:
+Add support for generator functions when using map.
+
+1.0.2:
+Fix link to github repository.
